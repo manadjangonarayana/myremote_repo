@@ -41,7 +41,10 @@ def inserting(request):
 
 def retrieving(request):
     data = ProductData.objects.all()
-    return render(request,'curdretrieving.html',{'data':data})
+
+    ldata = len(data)
+
+    return render(request,'curdretrieving.html',{'data':data, 'ldata':ldata})
 
 
 def updating(request):

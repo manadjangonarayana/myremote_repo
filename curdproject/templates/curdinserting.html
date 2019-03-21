@@ -23,11 +23,8 @@
         .btn{
             margin-left: 20px;
         }
-        h3,a{
-            margin-top: 400px;
-            margin-left: 150px;
-            font-size: 50px;
-            font-family: "Arial Black"
+        a{
+            color: darkblue;
         }
         body{
             background-color: cyan;
@@ -37,11 +34,9 @@
 
 </head>
 <body>
-
-
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="offset-md-3 col-md-6">
             <form method="POST">
                 <h1>Please insert the data</h1>
                 {% csrf_token %}
@@ -51,14 +46,11 @@
                 <input type="reset" value="Clear" class=" btn btn-danger">
                     </center>
             </form>
-        </div>
-
-        <div class="col-md-6">
-
-           <h3> Thank You </h3>
+            <center>
             <a href="/#/">Goto Home</a>
-
+                </center>
         </div>
+
     </div>
 </div>
 </body>

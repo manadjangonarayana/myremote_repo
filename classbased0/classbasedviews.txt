@@ -1,0 +1,12 @@
+A view is a callable which takes a request and returns a response. This can be more than just a function, and Django provides an example of some classes which can be used as views. These allow you to structure your views and reuse code by harnessing inheritance and mixins.
+
+Django provides base view classes which will suit a wide range of applications. All views inherit from the View class, which handles linking the view in to the URLs, HTTP method dispatching and other simple features. RedirectView is for a simple HTTP redirect, and TemplateView extends the base class to make it also render a template.
+
+
+The simplest way to use generic views is to create them directly in your URLconf. If you’re only changing a few simple attributes on a class-based view, you can simply pass them into the as_view() method call itself.
+
+
+Class-based views provide an alternative way to implement views as Python objects instead of functions. They do not replace function-based views, but have certain differences and advantages when compared to function-based views:
+
+Organization of code related to specific HTTP methods (GET, POST, etc.) can be addressed by separate methods instead of conditional branching.
+Object oriented techniques such as mixins (multiple inheritance) can be used to factor code into reusable components
